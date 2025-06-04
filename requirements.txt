@@ -1,0 +1,74 @@
+Libraries Used and Their Purpose:-
+
+Streamlit:-
+Description: A Python framework for building interactive web applications with minimal code.
+Purpose: Used to create a user-friendly web interface where users can upload content and style images, trigger neural style transfer, and view the stylized result.
+Installation:         "pip install streamlit"
+
+
+TensorFlow:-
+Description: An open-source machine learning framework for building and deploying ML models.
+Purpose: Provides the backend for loading and processing images, as well as handling tensor operations for the neural style transfer model.
+Installation:          "pip install tensorflow"
+
+
+TensorFlow Hub:-
+Description: A library for loading pre-trained machine learning models from TensorFlow Hub.
+Purpose: Used to load the pre-trained Magenta Arbitrary Image Stylization model (arbitrary-image-stylization-v1-256/2) for performing neural style transfer.
+Installation:         "pip install tensorflow-hub"
+
+
+Pillow (PIL):-
+Description: A Python imaging library for opening, manipulating, and saving image files.
+Purpose: Used to open and preprocess uploaded images (content and style) and convert the stylized tensor output back to an image for display.
+Installation:           "pip install Pillow"
+
+
+NumPy:-
+Description: A Python library for numerical computations and array operations.
+Purpose: Used to convert images to arrays and perform numerical preprocessing (e.g., normalizing pixel values) required for the style transfer model.
+Installation:            "pip install numpy"
+
+
+Pyngrok:-
+Description: A Python wrapper for ngrok, a tool that creates secure public URLs for local web servers.
+Purpose: Used to expose the Streamlit app (running locally on port 8501) to a public URL, making it accessible online for testing or sharing.
+Installation:             "pip install pyngrok"
+
+
+OS:-
+Description: A standard Python library for interacting with the operating system.
+Purpose: Used to execute system commands to run the Streamlit app in the background and manage ngrok processes.
+Installation:
+No installation required, as os is included in Python’s standard library.
+
+
+Why These Libraries Were Chosen:-
+
+
+Streamlit: Simplifies web app development, providing an intuitive interface for users to upload images and view stylized results.
+TensorFlow: Offers robust tensor processing capabilities, essential for handling the neural style transfer model and image data.
+TensorFlow Hub: Enables easy access to the pre-trained Magenta model, streamlining the style transfer process.
+Pillow: Provides efficient image handling, crucial for preprocessing and displaying images in the app.
+NumPy: Facilitates numerical operations on image data, ensuring compatibility with TensorFlow’s tensor requirements.
+Pyngrok: Allows the local Streamlit app to be shared publicly via a secure URL, ideal for testing or demo purposes.
+OS: Supports system-level operations for running the Streamlit server and managing ngrok tunnels.
+
+
+Installation Steps:-
+
+To set up the environment for the Neural Style Transfer App, run the following commands in your terminal or command prompt:
+
+pip install streamlit
+pip install tensorflow
+pip install tensorflow-hub
+pip install Pillow
+pip install numpy
+pip install pyngrok
+
+Note: Ensure you have Python installed (version 3.7 or higher recommended). The os library is part of Python’s standard library and requires no additional installation.
+TensorFlow can be resource-intensive; consider installing a compatible version for your system (e.g., CPU or GPU support). 
+An internet connection is required to download the pre-trained model from TensorFlow Hub. 
+Ensure app.py exists in the working directory before running the app.
+
+These libraries and installation steps enable the creation, deployment, and accessibility of a functional neural style transfer web app.
